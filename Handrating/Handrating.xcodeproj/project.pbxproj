@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389C58C27E29FAE77FEE5695 /* Pods_HandratingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887ACB4786B31D759582FA5B /* Pods_HandratingTests.framework */; };
+		437B39061EE3609B00F954EC /* Pods_Handrating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 437B39051EE3609B00F954EC /* Pods_Handrating.framework */; };
 		43E0D9271EE33104001E9DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E0D9261EE33104001E9DB6 /* AppDelegate.swift */; };
 		43E0D9291EE33104001E9DB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E0D9281EE33104001E9DB6 /* ViewController.swift */; };
 		43E0D92C1EE33104001E9DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E0D92A1EE33104001E9DB6 /* Main.storyboard */; };
 		43E0D92E1EE33104001E9DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E0D92D1EE33104001E9DB6 /* Assets.xcassets */; };
 		43E0D9311EE33104001E9DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E0D92F1EE33104001E9DB6 /* LaunchScreen.storyboard */; };
 		43E0D93C1EE33104001E9DB6 /* HandratingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E0D93B1EE33104001E9DB6 /* HandratingTests.swift */; };
+		43E0D94A1EE3322E001E9DB6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E0D9491EE3322E001E9DB6 /* AVKit.framework */; };
+		43E0D94D1EE345CA001E9DB6 /* Bridger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43E0D94C1EE345CA001E9DB6 /* Bridger.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		437B38FE1EE35E8400F954EC /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../../../Library/Developer/Xcode/DerivedData/Handrating-cewvnovcdmthblbspikqxqzcivnp/Build/Products/Debug-iphoneos/TesseractOCRiOS/TesseractOCR.framework"; sourceTree = "<group>"; };
+		437B39001EE35EB300F954EC /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = ../../../Downloads/TesseractOCR.framework; sourceTree = "<group>"; };
+		437B39031EE35F0000F954EC /* Pods_Handrating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Handrating.framework; path = "Pods/../build/Debug-iphoneos/Pods_Handrating.framework"; sourceTree = "<group>"; };
+		437B39051EE3609B00F954EC /* Pods_Handrating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Handrating.framework; path = "Pods/../build/Debug-iphoneos/Pods_Handrating.framework"; sourceTree = "<group>"; };
 		43E0D9231EE33104001E9DB6 /* Handrating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handrating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E0D9261EE33104001E9DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E0D9281EE33104001E9DB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +44,17 @@
 		43E0D9371EE33104001E9DB6 /* HandratingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandratingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E0D93B1EE33104001E9DB6 /* HandratingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandratingTests.swift; sourceTree = "<group>"; };
 		43E0D93D1EE33104001E9DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43E0D9471EE33224001E9DB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		43E0D9491EE3322E001E9DB6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		43E0D94B1EE345C9001E9DB6 /* Handrating-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Handrating-Bridging-Header.h"; sourceTree = "<group>"; };
+		43E0D94C1EE345CA001E9DB6 /* Bridger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Bridger.mm; sourceTree = "<group>"; };
+		43E0D94E1EE345F7001E9DB6 /* Bridger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridger.h; sourceTree = "<group>"; };
+		4B1658DC2C107F08337E4B1E /* Pods-Handrating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handrating.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handrating/Pods-Handrating.release.xcconfig"; sourceTree = "<group>"; };
+		6291C4E92CADAD92388BC1E3 /* Pods-HandratingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandratingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandratingTests/Pods-HandratingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		758A0E7A9C9DBC8F09CD6C0D /* Pods-Handrating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handrating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handrating/Pods-Handrating.debug.xcconfig"; sourceTree = "<group>"; };
+		887ACB4786B31D759582FA5B /* Pods_HandratingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandratingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0B87ECDA1845DC3106FD79 /* Pods_Handrating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handrating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6BDC7B81CD19AC7CF5F55D /* Pods-HandratingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandratingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandratingTests/Pods-HandratingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437B39061EE3609B00F954EC /* Pods_Handrating.framework in Frameworks */,
+				43E0D94A1EE3322E001E9DB6 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389C58C27E29FAE77FEE5695 /* Pods_HandratingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +84,8 @@
 				43E0D9251EE33104001E9DB6 /* Handrating */,
 				43E0D93A1EE33104001E9DB6 /* HandratingTests */,
 				43E0D9241EE33104001E9DB6 /* Products */,
+				43E0D9461EE33224001E9DB6 /* Frameworks */,
+				E94FA38E504E1FA133CF3305 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +103,13 @@
 			children = (
 				43E0D9261EE33104001E9DB6 /* AppDelegate.swift */,
 				43E0D9281EE33104001E9DB6 /* ViewController.swift */,
+				43E0D94C1EE345CA001E9DB6 /* Bridger.mm */,
+				43E0D94E1EE345F7001E9DB6 /* Bridger.h */,
 				43E0D92A1EE33104001E9DB6 /* Main.storyboard */,
 				43E0D92D1EE33104001E9DB6 /* Assets.xcassets */,
 				43E0D92F1EE33104001E9DB6 /* LaunchScreen.storyboard */,
 				43E0D9321EE33104001E9DB6 /* Info.plist */,
+				43E0D94B1EE345C9001E9DB6 /* Handrating-Bridging-Header.h */,
 			);
 			path = Handrating;
 			sourceTree = "<group>";
@@ -96,6 +123,32 @@
 			path = HandratingTests;
 			sourceTree = "<group>";
 		};
+		43E0D9461EE33224001E9DB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				437B39051EE3609B00F954EC /* Pods_Handrating.framework */,
+				437B39031EE35F0000F954EC /* Pods_Handrating.framework */,
+				437B39001EE35EB300F954EC /* TesseractOCR.framework */,
+				437B38FE1EE35E8400F954EC /* TesseractOCR.framework */,
+				43E0D9491EE3322E001E9DB6 /* AVKit.framework */,
+				43E0D9471EE33224001E9DB6 /* AVFoundation.framework */,
+				FD0B87ECDA1845DC3106FD79 /* Pods_Handrating.framework */,
+				887ACB4786B31D759582FA5B /* Pods_HandratingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E94FA38E504E1FA133CF3305 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				758A0E7A9C9DBC8F09CD6C0D /* Pods-Handrating.debug.xcconfig */,
+				4B1658DC2C107F08337E4B1E /* Pods-Handrating.release.xcconfig */,
+				6291C4E92CADAD92388BC1E3 /* Pods-HandratingTests.debug.xcconfig */,
+				FD6BDC7B81CD19AC7CF5F55D /* Pods-HandratingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E0D9401EE33104001E9DB6 /* Build configuration list for PBXNativeTarget "Handrating" */;
 			buildPhases = (
+				9A963F9D7D5CC3392617227E /* [CP] Check Pods Manifest.lock */,
 				43E0D91F1EE33104001E9DB6 /* Sources */,
 				43E0D9201EE33104001E9DB6 /* Frameworks */,
 				43E0D9211EE33104001E9DB6 /* Resources */,
+				809A671B2C1E7090E5A76F61 /* [CP] Embed Pods Frameworks */,
+				77025CD28BBDC27B683E05BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E0D9431EE33104001E9DB6 /* Build configuration list for PBXNativeTarget "HandratingTests" */;
 			buildPhases = (
+				55C02AA6462BFC53AB0C8B48 /* [CP] Check Pods Manifest.lock */,
 				43E0D9331EE33104001E9DB6 /* Sources */,
 				43E0D9341EE33104001E9DB6 /* Frameworks */,
 				43E0D9351EE33104001E9DB6 /* Resources */,
+				880713E7BA8D44A24A03D789 /* [CP] Embed Pods Frameworks */,
+				D1E9A0F8ED7DF2C3674FCD66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +205,8 @@
 				TargetAttributes = {
 					43E0D9221EE33104001E9DB6 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DSQ7CENLGM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					43E0D9361EE33104001E9DB6 = {
@@ -194,11 +255,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55C02AA6462BFC53AB0C8B48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77025CD28BBDC27B683E05BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handrating/Pods-Handrating-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		809A671B2C1E7090E5A76F61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handrating/Pods-Handrating-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		880713E7BA8D44A24A03D789 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HandratingTests/Pods-HandratingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A963F9D7D5CC3392617227E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1E9A0F8ED7DF2C3674FCD66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HandratingTests/Pods-HandratingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43E0D91F1EE33104001E9DB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E0D94D1EE345CA001E9DB6 /* Bridger.mm in Sources */,
 				43E0D9291EE33104001E9DB6 /* ViewController.swift in Sources */,
 				43E0D9271EE33104001E9DB6 /* AppDelegate.swift in Sources */,
 			);
@@ -339,30 +494,50 @@
 		};
 		43E0D9411EE33104001E9DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758A0E7A9C9DBC8F09CD6C0D /* Pods-Handrating.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = DSQ7CENLGM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Handrating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Handrating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handrating/Handrating-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		43E0D9421EE33104001E9DB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1658DC2C107F08337E4B1E /* Pods-Handrating.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = DSQ7CENLGM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Handrating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Handrating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handrating/Handrating-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		43E0D9441EE33104001E9DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6291C4E92CADAD92388BC1E3 /* Pods-HandratingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -377,6 +552,7 @@
 		};
 		43E0D9451EE33104001E9DB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6BDC7B81CD19AC7CF5F55D /* Pods-HandratingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -408,6 +584,7 @@
 				43E0D9421EE33104001E9DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43E0D9431EE33104001E9DB6 /* Build configuration list for PBXNativeTarget "HandratingTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +593,7 @@
 				43E0D9451EE33104001E9DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

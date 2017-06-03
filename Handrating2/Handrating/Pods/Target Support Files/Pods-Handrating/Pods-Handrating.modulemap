@@ -1,0 +1,6 @@
+framework module Pods_Handrating {
+  umbrella header "Pods-Handrating-umbrella.h"
+
+  export *
+  module * { export * }
+}
