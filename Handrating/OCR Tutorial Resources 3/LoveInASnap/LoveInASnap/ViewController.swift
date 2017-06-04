@@ -12,16 +12,36 @@ import Foundation
 
 class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
   
+  @IBOutlet weak var InputField: UITextField!
+ //       @IBOutlet weak var Input: UIButton!
+  @IBOutlet weak var GO: UIButton!
+
+  @IBAction func Go(_ sender: UIButton) {
+  }
+  
   @IBOutlet weak var textView: UITextView!
   @IBOutlet weak var findTextField: UITextField!
   @IBOutlet weak var replaceTextField: UITextField!
   @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+    return true
+  }
+  
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    ans = InputField.text!
+    print(ans)
+    
+  }
+  
+  var ans:String = "y"
   var activityIndicator:UIActivityIndicatorView!
   var originalTopMargin:CGFloat!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    InputField.delegate=self
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -31,6 +51,9 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
   }
   
   func performImageRecognition(_ image: UIImage) {
+    
+
+    
     // 1
     let tesseract = G8Tesseract()
     // 2
@@ -43,21 +66,84 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     tesseract.maximumRecognitionTime = 60.0
     // 6
     tesseract.image = image.g8_blackAndWhite()
-    tesseract.recognize()
+       tesseract.recognize()
+    
     // 7
      // print(tesseract.recognizedText)
     //print(tesseract.recognizedText.characters.count)
+    
+    removeActivityIndicator()
+    
+    /*do{
+    try tesseract.recognizedText
+    } catch {
+      
+    }*/
+
+    if(tesseract.recognizedText! != ""){
+ 
+    print(tesseract.recognizedText)
     let index = tesseract.recognizedText.index(tesseract.recognizedText.startIndex, offsetBy: tesseract.recognizedText.characters.count-2)
-   
-    let t = tesseract.recognizedText.substring(to: index).getLevenshtein("Hello")
-    textView.text = String(t)
+    print(tesseract.recognizedText.substring(to: index))
+
+
+   print(ans)
+      if(tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != ""){
+   let t = tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).getLevenshtein(ans)
+   //   let t = tesseract.recognizedText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).getLevenshtein(ans)
+        
+        
+      var p = Double (tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).characters.count - t) / Double (tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).characters.count)
+        if(tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).characters.count - t<0){
+          p = 0;
+        }
+      let s = tesseract.recognizedText.substring(to: index).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+      textView.text = "You wrote: "
+        textView.text! +=  s
+      textView.text! += "\n"
+        textView.text! += "You were "
+          textView.text! += String(t) + " letter(s) off." + "\n"
+      textView.text! += "You were " + String (Int (100*p)) + "% correct"
+      textView.font = UIFont(name: "Cochin", size: 18)
 
        textView.isEditable = true
     // 8
-    removeActivityIndicator()
+    }
+      else{
+        textView.text = "Please retake the photo!"
+      }
+    }
+    else{
+      textView.text = "Please retake the photo!"
+    }
+    
   }
+  /*
+  @IBAction func inputButtonAction(_ sender: UIButton) {
+    // 1
+    view.endEditing(true)
+    moveViewDown()
+    // 2
+    let imagePickerActionSheet = UIAlertController(title: "Input the Correct Answer!",
+                                                   message: nil, preferredStyle: .actionSheet)
+    // 3
+    // 5
+    
+    // 6
+    
+  
+    present(imagePickerActionSheet, animated: true,
+            completion: nil)
+    ans = askForCorrectAnswer()
+    print("Buttonn")
+    print(ans)
+    
+  }
+*/
   
   @IBAction func takePhoto(_ sender: AnyObject) {
+    
+    
     // 1
     view.endEditing(true)
     moveViewDown()
@@ -77,7 +163,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
       }
       imagePickerActionSheet.addAction(cameraButton)
     }
-    // 4
+   /* // 4
     let libraryButton = UIAlertAction(title: "Choose Existing",
       style: .default) { (alert) -> Void in
         let imagePicker = UIImagePickerController()
@@ -87,13 +173,15 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
           animated: true,
           completion: nil)
     }
-    imagePickerActionSheet.addAction(libraryButton)
+    imagePickerActionSheet.addAction(libraryButton)*/
     // 5
     let cancelButton = UIAlertAction(title: "Cancel",
       style: .cancel) { (alert) -> Void in
     }
     imagePickerActionSheet.addAction(cancelButton)
     // 6
+
+    
     present(imagePickerActionSheet, animated: true,
       completion: nil)
   }
@@ -103,8 +191,45 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
   }
   
   @IBAction func sharePoem(_ sender: AnyObject) {
-    
   }
+  
+ 
+  //PROMPT FOR CORRECT STRING
+  func askForCorrectAnswer() -> String {
+    var alertController:UIAlertController?
+    
+    
+    var answer:String = "some crap"
+    
+    alertController = UIAlertController(title: "Enter Text",
+                                        message: "Enter some text below",
+                                        preferredStyle: .alert)
+    
+    
+    alertController!.addTextField(
+      configurationHandler: {(textField: UITextField!) in
+        textField.placeholder = "Enter something"
+    })
+    
+    let action = UIAlertAction(title: "Submit",
+                               style: UIAlertActionStyle.default,
+                               handler: {
+                                [weak self]
+                                (paramAction:UIAlertAction!) in
+                                if let textFields = alertController?.textFields{
+                                  let theTextFields = textFields as [UITextField]
+                                  let enteredText = theTextFields[0].text
+                                  answer = enteredText!
+                                                               //self!.displayLabel.text = enteredText
+                                }
+    })
+    
+    alertController?.addAction(action)
+    self.present(alertController!, animated: true, completion: nil)
+    return answer
+    
+
+  }//askforcorrectAnswer()
   
   
   // Activity Indicator methods
@@ -195,6 +320,8 @@ func scaleImage(_ image: UIImage, maxDimension: CGFloat) -> UIImage {
   return scaledImage!
 }
 
+
+
 extension ViewController: UIImagePickerControllerDelegate {
   func imagePickerController(_ picker: UIImagePickerController,
     didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -204,7 +331,11 @@ extension ViewController: UIImagePickerControllerDelegate {
       addActivityIndicator()
       
       dismiss(animated: true, completion: {
-        self.performImageRecognition(scaledImage)
+        
+                self.performImageRecognition(scaledImage)
       })
   }
+
+
+  
 }

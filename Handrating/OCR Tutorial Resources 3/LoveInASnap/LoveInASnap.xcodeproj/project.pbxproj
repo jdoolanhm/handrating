@@ -15,6 +15,7 @@
 		041EDBE51A625CED00ECDA48 /* LoveInASnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EDBE41A625CED00ECDA48 /* LoveInASnapTests.swift */; };
 		041EDBF01A625D9200ECDA48 /* Envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 041EDBEE1A625D9200ECDA48 /* Envelope.png */; };
 		041EDBF11A625D9200ECDA48 /* Swap.png in Resources */ = {isa = PBXBuildFile; fileRef = 041EDBEF1A625D9200ECDA48 /* Swap.png */; };
+		4328BB2E1EE42DBA003552C2 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 4328BB2D1EE42DBA003552C2 /* AppIcon.appiconset */; };
 		437B39401EE371A100F954EC /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B393F1EE371A100F954EC /* Grade.swift */; };
 		97AAC07E1EE360660045476E /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AAC07D1EE360660045476E /* TesseractOCR.framework */; };
 		97AAC0801EE360980045476E /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 97AAC07F1EE360980045476E /* tessdata */; };
@@ -45,6 +46,7 @@
 		041EDBE41A625CED00ECDA48 /* LoveInASnapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveInASnapTests.swift; sourceTree = "<group>"; };
 		041EDBEE1A625D9200ECDA48 /* Envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Envelope.png; sourceTree = "<group>"; };
 		041EDBEF1A625D9200ECDA48 /* Swap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swap.png; sourceTree = "<group>"; };
+		4328BB2D1EE42DBA003552C2 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		437B393F1EE371A100F954EC /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		97AAC07D1EE360660045476E /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
 		97AAC07F1EE360980045476E /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				437B393F1EE371A100F954EC /* Grade.swift */,
 				041EDBD21A625CEC00ECDA48 /* Main.storyboard */,
 				041EDBD51A625CEC00ECDA48 /* Images.xcassets */,
+				4328BB2D1EE42DBA003552C2 /* AppIcon.appiconset */,
 				041EDBD71A625CEC00ECDA48 /* LaunchScreen.xib */,
 				041EDBCC1A625CEC00ECDA48 /* Supporting Files */,
 			);
@@ -229,6 +232,7 @@
 				041EDBF01A625D9200ECDA48 /* Envelope.png in Resources */,
 				041EDBF11A625D9200ECDA48 /* Swap.png in Resources */,
 				041EDBD91A625CEC00ECDA48 /* LaunchScreen.xib in Resources */,
+				4328BB2E1EE42DBA003552C2 /* AppIcon.appiconset in Resources */,
 				041EDBD61A625CEC00ECDA48 /* Images.xcassets in Resources */,
 				97AAC0801EE360980045476E /* tessdata in Resources */,
 			);
